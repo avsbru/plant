@@ -92,7 +92,10 @@ label_point6_y.grid(row=13,column=2, padx=5,pady=5)
 entry_point6_y = tk.Entry(root,width=4)
 entry_point6_y.grid(row=13,column=3,padx=5,pady=5)
 
-label_test = tk.Label(root)
+frame = tk.Frame(root, borderwidth=0, relief="sunken")
+frame.place(x=200,y=10,width=300,height=500)
+
+label_test = tk.Label(frame)
 label_test.grid(row=0,column=6,padx=5,pady=5)
 
 button = tk.Button(root,text="Рассчитать",command=run_math)
