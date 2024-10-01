@@ -1,6 +1,6 @@
 import tkinter as tk
 
-def run_math():
+def run_math(event):
     x1 = entry_point1_x.get()
     y1 = entry_point1_y.get()
     coordinates ={'point1':{'x':entry_point1_x.get(),'y':entry_point1_y.get()}}
@@ -98,8 +98,9 @@ frame.place(x=200,y=10,width=300,height=500)
 label_test = tk.Label(frame)
 label_test.grid(row=0,column=6,padx=5,pady=5)
 
-button = tk.Button(root,text="Рассчитать",command=run_math)
+button = tk.Button(root,text="Рассчитать")
+button.bind('<Return>',run_math)
+button.bind('<Button-1>',run_math)
 button.grid(row=15, column=0, columnspan=4, pady=10)
-
 
 root.mainloop()
